@@ -143,8 +143,7 @@ The HTML/JavaScript simulation and C++ program run independently in this version
 
 ## 👩‍💻 Contributors
 
-Add the names of all project team members here.
-
-## 📄 License
-
-This project is intended for educational purposes.
+Vaishnavi Gosavi
+Pranjali Mule
+Aditya Munde
+Rajkumar Pal
