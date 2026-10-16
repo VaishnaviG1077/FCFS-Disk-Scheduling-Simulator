@@ -1,0 +1,183 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #173b65;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+main {
+    width: min(900px, 94%);
+    margin: 25px auto;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #d7dce3;
+    border-radius: 6px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 6px #00000008;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+    color: #173b65;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 9px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-top: 22px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #aeb8c5;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #8bb8ed;
+    border-color: #2768ad;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #104c80;
+}
+
+.reset {
+    background: #606b78;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.formula {
+    background: #edf4fb;
+    padding: 10px;
+    border-left: 4px solid #1769aa;
+    overflow-wrap: anywhere;
+}
+
+#error {
+    color: #bd2020;
+    font-weight: bold;
+}
+
+.animation {
+    min-height: 90px;
+    padding: 16px;
+    border: 1px solid #d7dce3;
+    border-radius: 4px;
+    background: #f8fafc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.step {
+    padding: 8px 12px;
+    border: 1px solid #1769aa;
+    border-radius: 5px;
+    background: #eaf3fc;
+    color: #173b65;
+    font-weight: bold;
+}
+
+.arrow {
+    color: #555;
+    font-weight: bold;
+}
+
+.current {
+    background: #1769aa;
+    color: white;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #d7dce3;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #edf2f7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e8ecf1;
+    color: #444;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 21px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .buttons button {
+        flex: 1;
+    }
+}
