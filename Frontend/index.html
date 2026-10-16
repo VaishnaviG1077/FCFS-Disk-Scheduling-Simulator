@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Disk Scheduling Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Operating System Virtual Lab</h1>
+        <p>FCFS Disk Scheduling Algorithm</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Enter cylinder requests separated by commas (0–99).</li>
+                <li>Enter the initial disk head position.</li>
+                <li>Click SUBMIT to simulate disk-head movement.</li>
+                <li>View total head movement and average seek time.</li>
+            </ol>
+            <p class="formula">
+                Total Seek Time = Seek Rate × Total Head Movement
+            </p>
+            <p class="formula">
+                Average Seek Time = Total Seek Time / Seek Operations
+            </p>
+            <p>Assumed seek rate: 1 second per cylinder.</p>
+        </section>
+
+        <section class="panel">
+            <h2>Input Field</h2>
+            <form id="fcfsForm">
+                <label for="requests">Cylinder Values:</label>
+                <input id="requests" type="text"
+                       value="5, 9, 18, 2, 15"
+                       placeholder="5, 9, 18, 2, 15"
+                       required>
+
+                <label for="head">Head Position:</label>
+                <input id="head" type="number"
+                       min="0" max="99" value="10" required>
+
+                <div class="buttons">
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset" class="reset">RESET</button>
+                </div>
+                <p id="error" role="alert"></p>
+            </form>
+        </section>
+
+        <section class="panel" id="output">
+            <h2>Output Field</h2>
+            <h3>FCFS Disk Scheduling</h3>
+
+            <p><strong>Seek Sequence:</strong>
+                <span id="sequence">—</span>
+            </p>
+            <p><strong>Total Head Movement:</strong>
+                <span id="movement">—</span>
+            </p>
+            <p><strong>Total Seek Time:</strong>
+                <span id="seekTime">—</span>
+            </p>
+            <p><strong>Seek Operations:</strong>
+                <span id="operations">—</span>
+            </p>
+            <p><strong>Average Seek Time:</strong>
+                <span id="average">—</span>
+            </p>
+
+            <h3>Disk Head Movement</h3>
+            <div id="animation" class="animation"
+                 aria-live="polite">
+                Submit the input to start the simulation.
+            </div>
+
+            <h3>Movement Details</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Movement</th>
+                        </tr>
+                    </thead>
+                    <tbody id="details">
+                        <tr>
+                            <td colspan="3">No data yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Calculate Average Seek Time</h2>
+            <label for="totalTime">Total Seek Time (seconds):</label>
+            <input type="number" id="totalTime" min="0"
+                   step="any" placeholder="Enter total seek time">
+
+            <label for="totalOps">Total Seek Operations:</label>
+            <input type="number" id="totalOps" min="1"
+                   step="1" placeholder="Enter number of operations">
+
+            <button id="calculate" type="button">SUBMIT</button>
+            <p id="manualAverage" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        FCFS Disk Scheduling | Operating Systems Project
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
