@@ -143,7 +143,10 @@ The HTML/JavaScript simulation and C++ program run independently in this version
 
 ## 👩‍💻 Contributors
 
-Vaishnavi Gosavi
-Pranjali Mule
-Aditya Munde
-Rajkumar Pal
+1.Vaishnavi Gosavi
+
+2.Pranjali Mule
+
+3.Aditya Munde
+
+4.Rajkumar Pal
